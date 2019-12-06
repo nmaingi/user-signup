@@ -35,7 +35,9 @@ def validate_logon():
     else:
         if len(username)<3 or len(username)>20:
             username_error="out of range"
-
+        elif username.count(' ')>0:
+            username_error="cannot have spaces"
+        
     if password==blank:
         password_error="give password"
     else:
