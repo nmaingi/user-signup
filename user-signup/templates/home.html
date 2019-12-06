@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content%}
+<title>log-on</title>
+
+<style>
+    .error{ color: red;}
+</style>
+
+
+
+<h1>login information</h1>
+<form action= "/home" method="POST">
+    <div>
+    <label>Username
+        <input type="text" name="username" value='{{username}}'/>
+        <span class="error">{{username_error}}</span>
+    </label>
+    </div>
+    <div>
+    <label>Password
+        <input type="password" name="password" value='{{password}}'/>
+        <span class="error">{{password_error}}</span>
+    </label>
+    </div>
+    <label>Retype password
+        <input type="password" name="password2" value='{{password2}}'/>
+        <span class="error">{{password2_error}}</span>
+    </label>
+    <div>
+    <label>Email(optional)
+        <input type="text" name="email" value='{{email}}'/>
+        <span class="error">{{email_error}}</span>
+    </label>
+    <input type="submit"/>
+    </div>
+</form>
+
+
+
+
+{% endblock %}
